@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">XpaceX</string>
+
+    <string name="success_launches">Success</string>
+    <string name="failure_launches">Failure</string>
+
+    <!--Home LAND-->
+    <string name="rocket_title">ROCKET</string>
+    <string name="rocket_name">Name:</string>
+    <string name="rocket_Model">Model:</string>
+    <string name="rocket_static">Static fire:</string>
+    <string name="rocket_success">Launch Success:</string>
+    <string name="rocket_company">Company:</string>
+    <string name="rocket_country">Country:</string>
+    <string name="rocket_first">First Flight:</string>
+</resources>

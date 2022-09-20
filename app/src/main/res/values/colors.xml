@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_title_launches">#005288</color>
+    <color name="primary_color">#A7A9AC</color>
+    <color name="color_primary_variant">#0CA3DB</color>
+    <color name="color_secondary">#37C5EF</color>
+    <color name="color_secondary_variant">#045788</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange_date">#ED5338</color>
+    <color name="transparent_black">#54000000</color>
+    <color name="invisible_color">#00555555</color>
+</resources>
