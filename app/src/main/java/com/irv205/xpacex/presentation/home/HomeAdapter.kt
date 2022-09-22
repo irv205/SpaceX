@@ -12,7 +12,6 @@ import com.irv205.xpacex.core.utils.setGlideImage
 import com.irv205.xpacex.core.utils.setGlideImageBG
 import com.irv205.xpacex.databinding.ItemListLaunchesBinding
 import com.irv205.xpacex.domain.models.LaunchesDetails
-import com.irv205.xpacex.utils.*
 import com.squareup.picasso.Picasso
 
 class HomeAdapter(private val callback: ((LaunchesDetails) -> Unit)? = null) :
