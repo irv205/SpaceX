@@ -1,4 +1,4 @@
-package com.irv205.xpacex.domain
+package com.irv205.xpacex.core.utils
 
 import com.google.gson.annotations.SerializedName
 

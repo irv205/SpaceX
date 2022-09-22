@@ -12,11 +12,11 @@ import com.irv205.xpacex.R
 import com.irv205.xpacex.databinding.FragmentDetailsBinding
 import com.irv205.xpacex.domain.models.LaunchesDetails
 import com.irv205.xpacex.domain.models.RocketResponse
-import com.irv205.xpacex.utils.LoadingDialog
-import com.irv205.xpacex.utils.core.observe
-import com.irv205.xpacex.utils.parseDate
-import com.irv205.xpacex.utils.setGlideImage
-import com.irv205.xpacex.utils.setGlideImageBG
+import com.irv205.xpacex.core.utils.LoadingDialog
+import com.irv205.xpacex.core.observe
+import com.irv205.xpacex.core.utils.parseDate
+import com.irv205.xpacex.core.utils.setGlideImage
+import com.irv205.xpacex.core.utils.setGlideImageBG
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 

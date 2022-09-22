@@ -6,22 +6,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.irv205.xpacex.R
 import com.irv205.xpacex.databinding.FragmentHomeBinding
 import com.irv205.xpacex.domain.models.LaunchesDetails
 import com.irv205.xpacex.domain.models.RocketResponse
-import com.irv205.xpacex.utils.LoadingDialog
-import com.irv205.xpacex.utils.core.observe
-import com.irv205.xpacex.utils.parseDate
-import com.irv205.xpacex.utils.setGlideImage
+import com.irv205.xpacex.core.utils.LoadingDialog
+import com.irv205.xpacex.core.Failure
+import com.irv205.xpacex.core.OnFailure
+import com.irv205.xpacex.core.observe
+import com.irv205.xpacex.core.utils.parseDate
+import com.irv205.xpacex.core.utils.setGlideImage
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 @AndroidEntryPoint
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), OnFailure {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewModel by viewModels<HomeViewModel>()
@@ -33,6 +36,7 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
         viewModel.apply {
             observe(homeViewState, ::onViewStateChanged)
+            observe(failure, this@HomeFragment::handleFailure)
         }
     }
 
@@ -116,6 +120,15 @@ class HomeFragment : Fragment() {
             }
             if (viewModel.carouselRocket.isNotEmpty()) icCarouselRocket?.setData(viewModel.carouselRocket)
             tvLandHomeRocketdDescription?.text = rocket.description
+        }
+    }
+
+    override fun handleFailure(failure: Failure?) {
+        when (failure) {
+            is Failure.NetWorkConnection -> Toast.makeText(requireContext(), "FAILURE TEST", Toast.LENGTH_LONG).show()
+            is Failure.ServerError -> failure.errorResponse?.message?.let { Toast.makeText(requireContext(), failure.errorResponse.message, Toast.LENGTH_LONG).show() }
+            is Failure.Unauthorized -> failure.errorResponse?.message?.let { Toast.makeText(requireContext(), failure.errorResponse.message, Toast.LENGTH_LONG).show() }
+            else -> {}
         }
     }
 }

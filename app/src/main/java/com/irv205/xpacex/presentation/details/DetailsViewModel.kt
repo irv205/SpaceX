@@ -8,7 +8,7 @@ import com.irv205.xpacex.domain.models.RocketResponse
 import com.irv205.xpacex.domain.useCase.GetLauncheByIdUC
 import com.irv205.xpacex.domain.useCase.GetRocketInfoUC
 import com.irv205.xpacex.presentation.home.HomeViewState
-import com.irv205.xpacex.utils.core.Failure
+import com.irv205.xpacex.core.Failure
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 import javax.inject.Inject

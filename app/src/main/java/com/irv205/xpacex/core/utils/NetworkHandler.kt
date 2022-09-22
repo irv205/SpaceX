@@ -1,4 +1,4 @@
-package com.irv205.xpacex.utils
+package com.irv205.xpacex.core.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

@@ -1,7 +1,7 @@
-package com.irv205.xpacex.utils
+package com.irv205.xpacex.core.utils
 
-import com.irv205.xpacex.utils.core.Either
-import com.irv205.xpacex.utils.core.Failure
+import com.irv205.xpacex.core.Either
+import com.irv205.xpacex.core.Failure
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async

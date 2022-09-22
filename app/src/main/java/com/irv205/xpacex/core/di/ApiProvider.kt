@@ -1,4 +1,4 @@
-package com.irv205.xpacex.di
+package com.irv205.xpacex.core.di
 
 import com.google.gson.GsonBuilder
 import com.irv205.xpacex.BuildConfig

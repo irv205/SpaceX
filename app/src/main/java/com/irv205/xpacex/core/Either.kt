@@ -1,4 +1,4 @@
-package com.irv205.xpacex.utils.core
+package com.irv205.xpacex.core
 
 sealed class Either<out L, out R> {
     /** * Represents the left side of [Either] class which by convention is a "Failure". */

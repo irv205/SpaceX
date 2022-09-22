@@ -1,4 +1,4 @@
-package com.irv205.xpacex.di
+package com.irv205.xpacex.core.di
 
 import com.irv205.xpacex.BuildConfig
 import com.irv205.xpacex.data.ApiSpacesX

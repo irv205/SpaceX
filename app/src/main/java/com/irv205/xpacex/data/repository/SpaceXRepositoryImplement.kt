@@ -1,13 +1,13 @@
 package com.irv205.xpacex.data.repository
 
 import androidx.lifecycle.viewmodel.CreationExtras
-import com.irv205.xpacex.utils.core.ApiRequest
-import com.irv205.xpacex.utils.core.Either
-import com.irv205.xpacex.utils.core.Failure
+import com.irv205.xpacex.core.ApiRequest
+import com.irv205.xpacex.core.Either
+import com.irv205.xpacex.core.Failure
 import com.irv205.xpacex.data.ApiSpacesX
 import com.irv205.xpacex.domain.models.LaunchesDetails
 import com.irv205.xpacex.domain.models.RocketResponse
-import com.irv205.xpacex.utils.NetworkHandler
+import com.irv205.xpacex.core.utils.NetworkHandler
 import javax.inject.Inject
 import javax.inject.Singleton
 

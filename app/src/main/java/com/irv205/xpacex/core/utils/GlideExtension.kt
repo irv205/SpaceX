@@ -1,4 +1,4 @@
-package com.irv205.xpacex.utils
+package com.irv205.xpacex.core.utils
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide

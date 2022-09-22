@@ -1,4 +1,4 @@
-package com.irv205.xpacex.di
+package com.irv205.xpacex.core.di
 
 import com.irv205.xpacex.data.repository.SpaceXRepository
 import com.irv205.xpacex.data.repository.SpaceXRepositoryImplement

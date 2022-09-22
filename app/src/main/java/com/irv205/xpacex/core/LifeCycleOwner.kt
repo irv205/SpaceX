@@ -1,4 +1,4 @@
-package com.irv205.xpacex.utils.core
+package com.irv205.xpacex.core
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData

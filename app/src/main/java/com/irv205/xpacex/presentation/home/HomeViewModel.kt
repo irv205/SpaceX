@@ -9,8 +9,8 @@ import com.irv205.xpacex.domain.useCase.GetLauncheByIdUC
 import com.irv205.xpacex.domain.useCase.GetLaunchesListUC
 import com.irv205.xpacex.domain.useCase.GetRocketInfoUC
 import com.irv205.xpacex.presentation.details.DetailsViewState
-import com.irv205.xpacex.utils.UseCase
-import com.irv205.xpacex.utils.core.Failure
+import com.irv205.xpacex.core.utils.UseCase
+import com.irv205.xpacex.core.Failure
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 import javax.inject.Inject
@@ -24,6 +24,7 @@ class HomeViewModel @Inject constructor(
 
     private val _homeViewState = MutableLiveData<HomeViewState>()
     val homeViewState : LiveData<HomeViewState> get() = _homeViewState
+    var failure: MutableLiveData<Failure> = MutableLiveData()
     val launchesList = mutableListOf<LaunchesDetails>()
     var rocket : RocketResponse = RocketResponse.empty()
     val carousellist = mutableListOf(
@@ -62,10 +63,6 @@ class HomeViewModel @Inject constructor(
         _homeViewState.value = HomeViewState.GetLaunches(response)
     }
 
-    fun failureResponse(failure: Failure){
-        _homeViewState.value = HomeViewState.Failure(failure.toString())
-    }
-
     private fun successResponse(response: List<LaunchesDetails>){
         if (response.isNotEmpty()) {
             launchesList.addAll(response)
@@ -84,5 +81,10 @@ class HomeViewModel @Inject constructor(
     fun rocketResponse(response: RocketResponse){
         rocket = response
         _homeViewState.value = HomeViewState.GetRocket(response)
+    }
+
+    protected fun failureResponse(failure: Failure){
+        this.failure.value = failure
+        _homeViewState.value = HomeViewState.Failure("")
     }
 }
